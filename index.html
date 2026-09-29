@@ -1,1 +1,53 @@
-<!doctype html><html lang='pt'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Pine Hill | Gestão de Contencioso</title><link rel='stylesheet' href='styles.css'><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script></head><body><div id="loginView" class="login-wrap"><div class="login-card"><div class="brand login-brand"><div class="mark">▲</div><div><b>PINE HILL</b><small>INTERNATIONAL</small></div></div><h1>Gestão de Contencioso</h1><p>Entre com o email autorizado.</p><input id="emailInput" type="email" placeholder="nome@empresa.com"><button id="loginBtn" class="btn primary">Enviar link de acesso</button><div id="loginMsg" class="muted"></div></div></div><div id="appView" class="app hidden"><aside><div class='brand'><div class='mark'>▲</div><div><b>PINE HILL</b><small>INTERNATIONAL</small></div></div><nav><button data-view='dashboard' class='active'>Dashboard</button><button data-view='processes'>Processos</button><button data-view='deadlines'>Prazos</button><button data-view='users'>Utilizadores</button><button data-view='admin'>Administração</button></nav></aside><main><header><div><h1 id='title'>Gestão de Contencioso</h1><p id='subtitle'>Visão geral</p></div><div class="header-actions"><input id='globalSearch' placeholder='Pesquisar processos, entidades, documentos...'><button id="logoutBtn" class="btn secondary">Sair</button></div></header><section id='content'></section></main></div><script src='app.js'></script></body></html>
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pine Hill | Gestão de Contencioso</title>
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+<div id="loginView" class="login-screen">
+  <div class="login-panel">
+    <div class="brand brand-login"><span class="brand-mark">PH</span><div><strong>PINE HILL</strong><small>INTERNATIONAL</small></div></div>
+    <div class="login-copy"><span class="eyebrow">INTERNAL LEGAL PLATFORM</span><h1>Gestão de<br>Contencioso</h1><p>Acesso reservado a utilizadores autorizados.</p></div>
+    <div class="login-form">
+      <label>Email</label>
+      <input id="emailInput" type="email" placeholder="nome@empresa.com">
+      <button id="loginBtn" class="btn btn-primary">Enviar link de acesso</button>
+      <div id="loginMsg" class="form-message"></div>
+    </div>
+  </div>
+  <div class="login-art"><div class="art-grid"></div><div class="art-copy"><span>LEGAL OPERATIONS</span><h2>Processos, prazos e documentação num único espaço.</h2></div></div>
+</div>
+
+<div id="appView" class="app-shell hidden">
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-mark">PH</span><div><strong>PINE HILL</strong><small>INTERNATIONAL</small></div></div>
+    <div class="side-label">GESTÃO JURÍDICA</div>
+    <nav>
+      <button data-view="dashboard" class="active"><span>⌂</span> Dashboard</button>
+      <button data-view="processes"><span>▤</span> Processos</button>
+      <button data-view="deadlines"><span>◷</span> Prazos</button>
+      <button data-view="users"><span>♙</span> Utilizadores</button>
+      <button data-view="admin"><span>⚙</span> Administração</button>
+    </nav>
+    <div class="side-footer"><div class="status-dot"></div><div><b>Sistema ativo</b><small>Supabase ligado</small></div></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar">
+      <div><div class="eyebrow" id="crumb">LEGAL OPERATIONS</div><h1 id="title">Dashboard</h1><p id="subtitle">Visão geral do contencioso</p></div>
+      <div class="top-actions">
+        <div class="search-box">⌕ <input id="globalSearch" placeholder="Pesquisar processos, entidades, documentos..."></div>
+        <button id="logoutBtn" class="icon-btn" title="Sair">↗</button>
+        <div class="avatar">PH</div>
+      </div>
+    </header>
+    <main id="content" class="content"></main>
+  </div>
+</div>
+<div id="modalRoot"></div>
+<script src="app.js"></script>
+</body>
+</html>
